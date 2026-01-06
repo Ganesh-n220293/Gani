@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Way To Courses</title>
+
+<style>
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(270deg,#0f0c29,#302b63,#24243e);
+    background-size: 600% 600%;
+    animation: bgMove 10s infinite;
+    color: white;
+}
+
+@keyframes bgMove {
+    0% {background-position:0% 50%;}
+    50% {background-position:100% 50%;}
+    100% {background-position:0% 50%;}
+}
+
+/* NAVBAR */
+.navbar {
+    background:black;
+    box-shadow:0 0 15px cyan;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.navbar ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    align-items:center;
+}
+
+.navbar li { position:relative; }
+
+.navbar a {
+    display:flex;
+    align-items:center;
+    padding:15px 20px;
+    color:cyan;
+    text-decoration:none;
+    font-weight:bold;
+    text-shadow:0 0 6px cyan;
+}
+
+.navbar a:hover {
+    background:rgba(0,255,255,0.2);
+}
+
+/* LOGO */
+.logo img {
+    width:32px;
+    margin-right:8px;
+    filter:drop-shadow(0 0 6px cyan);
+}
+
+/* DROPDOWN */
+.dropdown {
+    display:none;
+    position:absolute;
+    background:black;
+    min-width:220px;
+    top:100%;
+    left:0;
+}
+
+.dropdown a {
+    padding:12px;
+    color:white;
+}
+
+.dropdown a:hover {
+    background:rgba(0,255,255,0.3);
+}
+
+.navbar li:hover .dropdown {
+    display:block;
+}
+
+/* SECTIONS */
+section { padding:60px 40px; }
+
+/* HERO */
+.hero {
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+
+.hero img {
+    width:350px;
+    border-radius:15px;
+    box-shadow:0 0 20px magenta;
+}
+
+.hero-text {
+    max-width:500px;
+}
+
+.hero-text h1 {
+    color:cyan;
+    text-shadow:0 0 10px cyan;
+}
+
+/* CARDS */
+.features { text-align:center; }
+
+.feature-box {
+    display:inline-block;
+    width:260px;
+    background:rgba(0,0,0,0.6);
+    margin:15px;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 0 15px cyan;
+    transition:0.3s;
+}
+
+.feature-box:hover {
+    transform:scale(1.08);
+    box-shadow:0 0 25px magenta;
+}
+
+/* ABOUT */
+#about {
+    background:rgba(0,0,0,0.6);
+    text-align:center;
+    box-shadow:0 0 20px magenta;
+}
+
+/* CONTACT */
+#contact {
+    background:black;
+    text-align:center;
+    box-shadow:0 0 25px cyan;
+}
+
+/* FLOAT BUTTON */
+.call-btn {
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:cyan;
+    color:black;
+    padding:15px;
+    border-radius:50%;
+    font-size:20px;
+    text-decoration:none;
+    box-shadow:0 0 15px cyan;
+}
+</style>
+</head>
+
+<body id="home">
+
+<!-- NAVBAR -->
+<nav class="navbar">
+<ul>
+
+<li class="logo">
+<a href="#home">
+<img src="https://cdn-icons-png.flaticon.com/512/919/919827.png">
+Way To Courses
+</a>
+</li>
+
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+
+<li>
+<a href="#">Courses</a>
+<div class="dropdown">
+<a href="#">C Programming</a>
+<a href="#">DSA</a>
+<a href="#">Java</a>
+<a href="#">Python</a>
+<a href="#">C++</a>
+<a href="#">Web Development</a>
+<a href="#">Machine Learning</a>
+<a href="#">Data Science</a>
+</div>
+</li>
+
+<li>
+<a href="#">Practice</a>
+<div class="dropdown">
+<a href="https://www.geeksforgeeks.org/" target="_blank">Beginner Level</a>
+<a href="https://www.hackerrank.com/" target="_blank">Medium Level</a>
+<a href="https://leetcode.com/" target="_blank">Hard Level</a>
+</div>
+</li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-text">
+<h1>Learn • Practice • Earn</h1>
+<p>
+Way To Courses helps you learn programming, practice coding,
+and build a successful tech career — all in one place.
+</p>
+</div>
+
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<h2>About Way To Courses</h2>
+<p>
+Inspired by platforms like GeeksforGeeks and W3Schools,
+we provide structured learning paths, practice links,
+and career-focused guidance for students.
+</p>
+</section>
+
+<!-- COURSES -->
+<section class="features">
+<h2>Popular Courses</h2>
+<div class="feature-box">C Programming<br>Beginner</div>
+<div class="feature-box">DSA<br>Interview Prep</div>
+<div class="feature-box">Web Development<br>HTML CSS JS</div>
+</section>
+
+<!-- LANGUAGES -->
+<section class="features">
+<h2>Learn By Language</h2>
+<div class="feature-box">C</div>
+<div class="feature-box">C++</div>
+<div class="feature-box">Java</div>
+<div class="feature-box">Python</div>
+<div class="feature-box">HTML</div>
+<div class="feature-box">CSS</div>
+<div class="feature-box">JavaScript</div>
+</section>
+
+<!-- PRACTICE STATS -->
+<section class="features">
+<h2>Your Practice Journey</h2>
+<div class="feature-box">🔥 Problems Solved<br>120+</div>
+<div class="feature-box">⭐ Skill Level<br>Intermediate</div>
+<div class="feature-box">🚀 Career Ready<br>In Progress</div>
+</section>
+
+<!-- ROADMAP -->
+<section class="features">
+<h2>Learning Roadmap</h2>
+<div class="feature-box">Beginner → C / Python</div>
+<div class="feature-box">Intermediate → DSA / Java</div>
+<div class="feature-box">Advanced → Web / ML / DS</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact Us</h2>
+<p>📞 Phone: <strong>9032994092</strong></p>
+<p>📧 Email: kolliganesh525@gmail.com</p>
+</section>
+
+<!-- FLOAT CALL BUTTON -->
+<a href="tel:9032994092" class="call-btn">📞</a>
+
+</body>
+</html>
